@@ -6,7 +6,7 @@ import { AdmissionComponent } from './pages/admission/admission.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'courses', component: CoursesComponent },
   { path: 'achievements', component: AchievementsComponent },
   { path: 'admission', component: AdmissionComponent },
