@@ -1,29 +1,55 @@
 <mat-toolbar color="primary" class="toolbar">
-    <span class="logo">📚 GSSS SARAH</span>
-    <span class="spacer"></span>
-    <!-- Desktop Navigation -->
-    <div class="menu-items">
-      <button mat-button routerLink="/">
-        <mat-icon>home</mat-icon>Home
-      </button>
-      <!-- <button mat-button routerLink="/courses">Courses</button> -->
-      <button mat-button routerLink="/achievements">
-        <mat-icon>group</mat-icon>
-        Achievements</button>
-      <!-- <button mat-button routerLink="/admission">Admissions</button> -->
-      <button mat-button routerLink="/contact"><mat-icon>info</mat-icon>Contact</button>
-    </div>
-  
-    <!-- Mobile Navigation (Hamburger Menu) -->
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
+  <a routerLink="/home">
+    <img src="assets/Logo.jpg" alt="Self-Help Group Logo" class="logo" width="50" />
+  </a>
+  <span >GSSS SARAH</span>
+  <span class="spacer"></span>
+
+  <!-- Desktop Navigation -->
+  <div class="menu-items">
+    <button mat-button routerLink="/">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
     </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/">Home</button>
-      <!-- <button mat-menu-item routerLink="/courses">Courses</button> -->
-      <button mat-menu-item routerLink="/achievements">Achievements</button>
-      <!-- <button mat-menu-item routerLink="/admission">Admissions</button> -->
-      <button mat-menu-item routerLink="/contact">Contact</button>
-    </mat-menu>
-  </mat-toolbar>
-  
+    
+    <button mat-button routerLink="/achievements">
+      <mat-icon>emoji_events</mat-icon>
+      <span>Achievements</span>
+    </button>
+    <button mat-button routerLink="/admission">
+      <mat-icon>person_add</mat-icon>
+      <span>Gallery</span>
+    </button>
+    <button mat-button routerLink="/contact">
+      <mat-icon>contact_mail</mat-icon>
+      <span>Contact</span>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation (Hamburger Menu) -->
+  <button mat-icon-button class="menu-toggle" [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-menu-item routerLink="/courses">
+      <mat-icon>school</mat-icon>
+      <span>Courses</span>
+    </button>
+    <button mat-menu-item routerLink="/achievements">
+      <mat-icon>emoji_events</mat-icon>
+      <span>Achievements</span>
+    </button>
+    <button mat-menu-item routerLink="/admission">
+      <mat-icon>person_add</mat-icon>
+      <span>Admissions</span>
+    </button>
+    <button mat-menu-item routerLink="/contact">
+      <mat-icon>contact_mail</mat-icon>
+      <span>Contact</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

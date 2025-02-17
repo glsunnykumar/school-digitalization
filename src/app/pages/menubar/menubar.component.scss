@@ -5,14 +5,15 @@
   padding: 0 16px;
 
   .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    height: 50px;
+    margin-right: 10px;
   }
 
   .spacer {
     flex: 1;
   }
 
+  /* Desktop Navigation */
   .menu-items {
     display: flex;
     gap: 16px;
@@ -29,16 +30,18 @@
       }
     }
 
+    /* Hide menu items in mobile view */
     @media (max-width: 768px) {
       display: none;
     }
   }
 
-  mat-icon {
+  /* Ensure only the hamburger menu icon is visible in mobile */
+  .menu-toggle {
     display: none;
 
     @media (max-width: 768px) {
-      display: block;
+      display: flex;
     }
   }
 }
