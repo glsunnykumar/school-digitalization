@@ -19,17 +19,22 @@ export class HomeComponent {
     {
       name: 'Computer Science',
       description: 'Learn programming, AI, and web development.',
-      image: '/assets/cs-course.jpg'
+      image: '/assets/AI.png'
     },
     {
       name: 'All Stream (Non Med)',
       description: 'Arts Commerce and Science.',
-      image: '/assets/business-course.jpg'
+      image: '/assets/AI.png'
     },
     {
       name: 'Graphic Design',
       description: 'Explore creativity with digital design tools.',
-      image: '/assets/design-course.jpg'
+       image: '/assets/AI.png'
+    },
+    {
+      name: 'CCE Enabled Evaluation',
+      description: 'Overall deveoplment of the students by evaluating them periodically.',
+       image: '/assets/AI.png'
     }
   ];
 
