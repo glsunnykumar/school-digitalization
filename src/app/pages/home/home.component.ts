@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { register } from 'swiper/element-bundle';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-home',
@@ -12,8 +13,7 @@ import { register } from 'swiper/element-bundle';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    CommonModule
-  ],
+    CommonModule, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas :[CUSTOM_ELEMENTS_SCHEMA]
