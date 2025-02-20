@@ -40,22 +40,22 @@
 
    <!-- Feature Cards -->
    <div class="feature-card">
-    <mat-icon>groups</mat-icon>
+    <img src="assets/Faculty.webp" alt="Principal" class="featured-photo">
     <h3>Expert Faculty</h3>
     <p>Learn from experienced educators.</p>
   </div>
   <div class="feature-card">
-    <mat-icon>school</mat-icon>
+    <img src="assets/Modern.webp" alt="Principal" class="featured-photo">
     <h3>Modern Infrastructure</h3>
     <p>Well euipped computer labs with modern Kyan.</p>
   </div>
   <div class="feature-card">
-    <mat-icon>handshake</mat-icon>
+    <img src="assets/Exposure.webp" alt="Principal" class="featured-photo">
     <h3>Exposure Visit</h3>
     <p>Visit to Various Place Every Session.</p>
   </div>
   <div class="feature-card">
-    <mat-icon>lightbulb</mat-icon>
+    <img src="assets/Food.webp" alt="Principal" class="featured-photo">
     <h3>Nuturious Food</h3>
     <p>We provide the cooked food in Lunch under PMBY.</p>
   </div>
@@ -64,6 +64,55 @@
 
 
   </div>
+</section>
+
+
+<section class="team-section">
+  <mat-card class="mission-card">
+  <h2>Meet Our Amazing Team</h2>
+  <p class="team-description">
+    Our team is dedicated to making a difference by serving society with passion and commitment. 
+    Each member contributes their skills and efforts to bring about meaningful change in our community.
+  </p>
+  <div class="team-container">
+
+    <!-- Second Row: Carousel for Other Members -->
+    <mat-card class="carousel-container">
+       <!-- Second Row: Carousel for Other Members -->
+       <div class="carousel-wrapper">
+        <swiper-container
+          slides-per-view="2"
+          space-between="20"
+          loop="true"
+          navigation="true"
+          pagination="true"
+          autoplay="true"          
+          autoplay-delay="3000"    
+          breakpoints='{
+            "640": { "slidesPerView": 1 },
+            "768": { "slidesPerView": 2 },
+            "1024": { "slidesPerView": 3 }
+          }'
+        >
+          <swiper-slide *ngFor="let member of topMembers">
+            <div class="carousel-card">
+              <img
+                [src]="member.photo"
+                alt="{{ member.name }}"
+                class="carousel-photo"
+              />
+              <h3 class="carousel-name">{{ member.name }}</h3>
+              <p class="carousel-designation">{{ member.designation }}</p>
+            </div>
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </mat-card>
+    <div class="viewMorebutton">
+    <button mat-raised-button color="primary" >View More</button>
+  </div>
+  </div>
+</mat-card>
 </section>
 
 <section class="featured-courses">
@@ -77,6 +126,8 @@
     </div>
   </div>
 </section>
+
+
 
 
 
