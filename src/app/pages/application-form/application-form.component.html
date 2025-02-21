@@ -1,0 +1,54 @@
+<form [formGroup]="applicationForm" (ngSubmit)="onSubmit()" class="apply-form">
+    <h2>Apply Now</h2>
+  
+    <!-- Full Name -->
+    <mat-form-field appearance="outline">
+      <mat-label>Full Name</mat-label>
+      <input matInput formControlName="fullName" type="text" required />
+    </mat-form-field>
+  
+    <!-- Email -->
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email" required />
+    </mat-form-field>
+  
+    <!-- Phone Number -->
+    <mat-form-field appearance="outline">
+      <mat-label>Phone Number</mat-label>
+      <input matInput formControlName="phone" type="tel" required />
+    </mat-form-field>
+  
+    <!-- Course Selection -->
+    <mat-form-field appearance="outline">
+      <mat-label>Course</mat-label>
+      <mat-select formControlName="course" required>
+        <mat-option *ngFor="let course of availableCourses" [value]="course">
+          {{ course }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <!-- Medium of Instruction -->
+    <div class="medium-checkbox">
+      <label>Select Medium of Instruction:</label>
+      <mat-checkbox formControlName="english">English</mat-checkbox>
+      <mat-checkbox formControlName="hindi">Hindi</mat-checkbox>
+      <mat-checkbox formControlName="other">Other</mat-checkbox>
+    </div>
+  
+    <!-- Address -->
+    <mat-form-field appearance="outline">
+      <mat-label>Address</mat-label>
+      <textarea matInput formControlName="address" rows="3"></textarea>
+    </mat-form-field>
+  
+    <!-- Form Actions -->
+    <div class="form-actions">
+      <button mat-button class="cancel-btn" type="button" (click)="onCancel()">Cancel</button>
+      <button mat-raised-button class="submit-btn" type="submit" [disabled]="!applicationForm.valid">
+        Submit
+      </button>
+    </div>
+  </form>
+  

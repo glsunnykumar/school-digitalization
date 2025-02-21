@@ -4,8 +4,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { register } from 'swiper/element-bundle';
 import { FooterComponent } from "../footer/footer.component";
+import { ApplicationFormComponent } from '../application-form/application-form.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,9 @@ import { FooterComponent } from "../footer/footer.component";
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    CommonModule, FooterComponent],
+    MatDialogModule,
+    CommonModule,
+     FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas :[CUSTOM_ELEMENTS_SCHEMA]
@@ -52,8 +56,16 @@ export class HomeComponent implements OnInit{
   
   ];
 
+  constructor(private dialog: MatDialog) {}
+
   ngOnInit(): void {
     register();
+  }
+
+  openApplicationForm() {
+    this.dialog.open(ApplicationFormComponent, {
+      width: '500px',
+    });
   }
 
 }

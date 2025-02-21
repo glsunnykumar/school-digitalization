@@ -1,0 +1,107 @@
+// Center the title
+h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  // Modal container styling
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; // Ensure elements stack properly
+    align-items: center; // Center content horizontally
+  }
+  
+  // Style form fields
+  mat-form-field {
+    width: 100%;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 5px;
+  
+    mat-label {
+      font-weight: 600;
+      color: #555;
+    }
+  }
+  
+  // Styling the submit and cancel buttons
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  
+    button {
+      width: 48%;
+      height: 40px;
+      font-size: 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .cancel-btn {
+      background: #ddd;
+      color: #333;
+      &:hover {
+        background: #bbb;
+      }
+    }
+  
+    .submit-btn {
+      background: #1976d2;
+      color: white;
+      &:hover {
+        background: #1559a5;
+      }
+    }
+  }
+  
+  // Responsive Design
+  @media (max-width: 600px) {
+    form {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+
+    .medium-checkbox {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+      
+        label {
+          font-weight: bold;
+          color: #333;
+        }
+      
+        mat-checkbox {
+          margin-left: 10px;
+        }
+      }
+      
+  
+    .form-actions {
+      flex-direction: column;
+      gap: 10px;
+    
+  
+      button {
+        width: 100%;
+      }
+    }
+  }
+  
